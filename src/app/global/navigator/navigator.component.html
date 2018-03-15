@@ -26,9 +26,9 @@
         <li class="nav-small-cap"> --- MAIN MENU</li>
         <!-- TODO - need to add admin condition to display navItem.adminOnly links... -->
         <li *ngFor="let navItem of navItems"
-            [ngClass]="{'active': currentPath === navItem.href}">
+            [ngClass]="{'active': selectedItem == navItem}" (click)="navClick(navItem)">
           <a routerLink="{{ navItem.href }}" class="waves-effect waves-dark"
-             [ngClass]="{'active': currentPath === navItem.href}">
+             [ngClass]="{'active': selectedItem == navItem}">
             <i class="ti-layout-grid2"></i>
             <span class="hide-menu"> {{ navItem.name }}</span>
           </a>
