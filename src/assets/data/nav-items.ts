@@ -4,26 +4,26 @@ export const NAVITEMS: NavItem[] = [
   {
     name: 'Dashboard',
     adminOnly: false,
-    href: 'dash'
+    href: '/dash'
   },
   {
     name: 'Create Request',
     adminOnly: false,
-    href: 'provision/create'
+    href: '/provision/create'
   },
   {
     name: 'View All Requests',
     adminOnly: false,
-    href: 'provisions'
+    href: '/provisions'
   },
   {
     name: 'View Customers',
     adminOnly: true,
-    href: 'customers'
+    href: '/customers'
   },
   {
     name: 'Register User',
     adminOnly: true,
-    href: 'user/create'
+    href: '/user/create'
   },
 ];
