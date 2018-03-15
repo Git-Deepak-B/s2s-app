@@ -1,0 +1,236 @@
+[
+  {
+    "id": 1,
+    "username": "mramanathan",
+    "company": "Gibi Systems",
+    "location": {
+      "addressLine1": "2442 courtney oaks rd",
+      "addressLine2": "suite# 123",
+      "city": "charlotte",
+      "state": "NC",
+      "zipCode": "28217",
+      "country": "USA"
+    },
+    "status": "Prequal Request",
+    "bandwidth": "10",
+    "dateCreated": "12-21-2017",
+    "dateModified": "01-02-2018",
+    "preferredServiceType": "Managed Broadband Service",
+    "siteId": "123",
+    "circuitPurpose": "Primary",
+    "workLogs": [
+      {
+        "createdDate": "12-21-2017",
+        "comment": "Created reques upon call from customer",
+        "createdBy": "psrinivasan"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "username": "mramanathan",
+    "company": "Gibi Systems",
+    "location": {
+      "addressLine1": "640 parkaire ln",
+      "addressLine2": "suite# 808",
+      "city": "charlotte",
+      "state": "NC",
+      "zipCode": "28217",
+      "country": "USA"
+    },
+    "status": "Quote Provided",
+    "bandwidth": "22",
+    "dateCreated": "11-18-2017",
+    "dateModified": "12-02-2017",
+    "siteId": "234",
+    "circuitPurpose": "Primary",
+    "preferredServiceType": "Bring Your Own Broadband"
+  },
+  {
+    "id": 3,
+    "username": "mramanathan",
+    "company": "Gibi systems",
+    "location": {
+      "addressLine1": "957 atlantic ave",
+      "addressLine2": "suite# c",
+      "city": "chicago",
+      "state": "IL",
+      "zipCode": "60169",
+      "country": "USA"
+    },
+    "status": "Order Received",
+    "bandwidth": "19",
+    "dateCreated": "12-12-2017",
+    "dateModified": "01-01-2018",
+    "siteId": "4567",
+    "circuitPurpose": "VoIP",
+    "preferredServiceType": "Managed Network Service"
+  },
+  {
+    "id": 4,
+    "username": "mramanathan",
+    "company": "Gibi systems",
+    "location": {
+      "addressLine1": "6270 courtney park rd",
+      "addressLine2": "suite# 7109",
+      "city": "charlotte",
+      "state": "NC",
+      "zipCode": "28217",
+      "country": "USA"
+    },
+    "status": "Order Placed with ISP",
+    "bandwidth": "2",
+    "dateCreated": "18-12-2017",
+    "dateModified": "24-12-2018",
+    "siteId": "122343",
+    "circuitPurpose": "Other",
+    "preferredServiceType": "Managed WiFi Service"
+  },
+  {
+    "id": 5,
+    "username": "mramanathan",
+    "company": "Gibi systems",
+    "location": {
+      "addressLine1": "2080 hassel rd",
+      "addressLine2": "suite# 609",
+      "city": "hoffman estates",
+      "state": "IL",
+      "zipCode": "60169",
+      "country": "USA"
+    },
+    "status": "Circuit Installed",
+    "bandwidth": "29",
+    "dateCreated": "01-01-2018",
+    "dateModified": "01-06-2018",
+    "siteId": "9994123",
+    "circuitPurpose": "Other",
+    "preferredServiceType": "Managed Network Service"
+  },
+  {
+    "id": 11,
+    "username": "psrinivasan",
+    "company": "Focus point",
+    "location": {
+      "addressLine1": "2442 courtney oaks rd",
+      "addressLine2": "suite# 123",
+      "city": "charlotte",
+      "state": "NC",
+      "zipCode": "28217",
+      "country": "USA"
+    },
+    "status": "Prequal Request",
+    "bandwidth": "10",
+    "dateCreated": "12-21-2017",
+    "dateModified": "01-02-2018",
+    "siteId": "234123",
+    "circuitPurpose": "Primary",
+    "preferredServiceType": "Managed Broadband Service",
+    "workLogs": [
+      {
+        "createdDate": "12-21-2017",
+        "comment": "Created reques upon call from customer",
+        "createdBy": "psrinivasan"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "username": "psrinivasan",
+    "company": "Focus point",
+    "location": {
+      "addressLine1": "640 parkaire ln",
+      "addressLine2": "suite# 808",
+      "city": "charlotte",
+      "state": "NC",
+      "zipCode": "28217",
+      "country": "USA"
+    },
+    "status": "Quote Provided",
+    "bandwidth": "22",
+    "dateCreated": "11-18-2017",
+    "dateModified": "12-02-2017",
+    "siteId": "123123",
+    "circuitPurpose": "Primary",
+    "preferredServiceType": "Bring Your Own Broadband"
+  },
+  {
+    "id": 13,
+    "username": "kravichandran",
+    "company": "Focus point",
+    "location": {
+      "addressLine1": "957 atlantic ave",
+      "addressLine2": "suite# c",
+      "city": "chicago",
+      "state": "IL",
+      "zipCode": "60169",
+      "country": "USA"
+    },
+    "status": "Order Received",
+    "bandwidth": "19",
+    "dateCreated": "12-12-2017",
+    "dateModified": "01-01-2018",
+    "siteId": "12323",
+    "circuitPurpose": "Other",
+    "preferredServiceType": "Managed Network Service"
+  },
+  {
+    "id": 14,
+    "username": "deepak",
+    "company": "Gibi systems",
+    "location": {
+      "addressLine1": "6270 courtney park rd",
+      "addressLine2": "suite# 7109",
+      "city": "charlotte",
+      "state": "NC",
+      "zipCode": "28217",
+      "country": "USA"
+    },
+    "status": "Order Placed with ISP",
+    "bandwidth": "2",
+    "dateCreated": "18-12-2017",
+    "dateModified": "24-12-2018",
+    "siteId": "1342345",
+    "circuitPurpose": "Backup",
+    "preferredServiceType": "Managed WiFi Service"
+  },
+  {
+    "id": 15,
+    "username": "kravichandran",
+    "company": "Gibi systems",
+    "location": {
+      "addressLine1": "2080 hassel rd",
+      "addressLine2": "suite# 609",
+      "city": "hoffman estates",
+      "state": "IL",
+      "zipCode": "60169",
+      "country": "USA"
+    },
+    "status": "Circuit Installed",
+    "bandwidth": "29",
+    "dateCreated": "01-01-2018",
+    "dateModified": "01-06-2018",
+    "siteId": "44444",
+    "circuitPurpose": "Other",
+    "preferredServiceType": "Managed Network Service"
+  },
+  {
+    "id": 16,
+    "username": "psrinivasan",
+    "company": "Gibi systems",
+    "location": {
+      "addressLine1": "2080 hassel rd",
+      "addressLine2": "suite# 609",
+      "city": "hoffman estates",
+      "state": "IL",
+      "zipCode": "60169",
+      "country": "USA"
+    },
+    "status": "Circuit Installed",
+    "bandwidth": "29",
+    "dateCreated": "01-01-2018",
+    "dateModified": "01-06-2018",
+    "siteId": "1234235253",
+    "circuitPurpose": "VoIP",
+    "preferredServiceType": "Managed Network Service"
+  }
+]

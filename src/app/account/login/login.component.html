@@ -2,31 +2,35 @@
   <div class="login-register">
     <div class="login-box card">
       <div class="card-body">
-
-        <form class="form-horizontal" id="loginform">
+        <form class="form-horizontal" id="loginform" [formGroup]="loginForm" #f="ngForm"
+              (submit)="signIn(f.value)">
           <div class="text-center db m-b-10">
             <img src="assets/images/S2S.jpg" alt="logo">
           </div>
-          <h6 class="box-title m-b-20 text-center">Welcome to s2s Managed Services Web Portal If you are an authorized user, please log in below</h6>
+          <h6 class="box-title m-b-20 text-center">Welcome to s2s Managed Services Web Portal If you are an authorized
+            user, please log in below</h6>
           <div class="form-group ">
             <div class="col-xs-12">
-              <input class="form-control" id="username" type="text" required="" placeholder="Username">
+              <input class="form-control" formControlName="username" type="text" placeholder="Username">
             </div>
           </div>
           <div class="form-group">
             <div class="col-xs-12">
-              <input class="form-control" type="password" required="" placeholder="Password">
+              <input class="form-control" type="password" formControlName="password" placeholder="Password">
             </div>
           </div>
+
           <div class="form-group row">
             <div class="col-md-12">
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" id="customCheck1">
                 <label class="custom-control-label" for="customCheck1">Remember me</label>
-                <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> Forgot password?</a>
+                <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i
+                  class="fa fa-lock m-r-5"></i> Forgot password?</a>
               </div>
             </div>
           </div>
+
           <div class="form-group text-center">
             <div class="col-xs-12 p-b-20">
               <button class="btn btn-block btn-primary" type="submit">Log In</button>
@@ -50,7 +54,8 @@
           </div>
           <div class="form-group text-center m-t-20">
             <div class="col-xs-12">
-              <button class="btn btn-primary btn-block text-uppercase waves-effect waves-light" type="submit">Reset</button>
+              <button class="btn btn-primary btn-block text-uppercase waves-effect waves-light" type="submit">Reset
+              </button>
             </div>
           </div>
         </form>
