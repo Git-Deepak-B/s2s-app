@@ -1,0 +1,44 @@
+.page-titles {
+  background: #fff;
+  padding: 14px 10px;
+  margin: 0 -25px 25px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid transparent;
+  border-radius: 0;
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+.card .card-title {
+  position: relative;
+  font-weight: 500;
+}
+.card-title {
+  margin-bottom: .75rem;
+}
+.h5, h5 {
+  font-size: 16px;
+}
+.m-t-30 {
+  margin-top: 30px;
+}
+.display-5 {
+  font-size: 3rem;
+}
+.ml-auto, .mx-auto {
+  margin-left: auto!important;
+}

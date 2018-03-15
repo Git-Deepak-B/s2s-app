@@ -1,0 +1,118 @@
+.left-sidebar {
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  top: 0;
+  z-index: 20;
+  padding-top: 70px;
+  box-shadow: 1px 0 20px rgba(0, 0, 0, .08);
+  background: #fff;
+}
+
+.ps {
+  -ms-touch-action: auto;
+  touch-action: auto;
+  overflow: hidden !important;
+  -ms-overflow-style: none;
+}
+
+.scroll-sidebar {
+  height: calc(100% - 67px);
+}
+
+.scroll-sidebar, .sidebar-nav .has-arrow {
+  position: relative;
+}
+
+.sidebar-nav {
+  padding: 15px 0 0;
+}
+
+.sidebar-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.card-title {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.card-body {
+  .btn {
+    padding: .375rem 0.75rem;
+    margin: 0;
+  }
+  .fa {
+    margin-right: 5px;
+  }
+}
+
+.sidebar-nav ul li.nav-small-cap {
+  font-size: 1rem;
+  margin-bottom: 0;
+  padding: 0 14px 14px 0;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.sidebar-nav > ul > li {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.sidebar-nav ul li {
+  list-style: none;
+}
+
+.sidebar-nav .waves-effect {
+  transition: none;
+  -webkit-transition: none;
+  -o-transition: none;
+}
+
+.sidebar-nav > ul > li > a {
+  border-left: 3px solid transparent;
+}
+
+.sidebar-nav ul li a {
+  color: #8d97ad;
+  padding: 10px 35px 10px 15px;
+  display: block;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.sidebar-nav > ul > li > a i {
+  width: 25px;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.sidebar-nav>ul>li.active>a {
+  color: #71b247;
+  border-left: 3px solid #71b247;
+}
+
+.sidebar-nav>ul>li:hover>a {
+  color: #71b247;
+  //border-left: 3px solid #71b247;
+}
