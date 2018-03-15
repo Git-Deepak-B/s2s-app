@@ -1,11 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700);
-.box-title {
-  font-size: 0.8rem;
+.page-wrapper {
+  padding-top: 64px;
+}
+@media (min-width: 1024px) {
+  .footer, .page-wrapper {
+    margin-left: 220px;
+  }
+}
+.page-wrapper {
+  background: #edf1f5;
+  position: relative;
+  min-height: 893px;
 }
 
-body{
-  font-family: Poppins,sans-serif;
+.login-register {
+  background-image: url(./assets/images/background/login-register.jpg);
 }
+
 
 
