@@ -16,6 +16,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TitlecasePipe } from './common/pipes/titlecase.pipe';
 import { AddressPipe } from './common/pipes/address.pipe';
 import { StatisticsComponent } from './global/statistics/statistics.component';
+import { CustomerListComponent } from './customer/customer-list/customer-list.component';
+import { CustomerListItemComponent } from './customer/customer-list-item/customer-list-item.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { StatisticsComponent } from './global/statistics/statistics.component';
     DashboardComponent,
     TitlecasePipe,
     AddressPipe,
-    StatisticsComponent
+    StatisticsComponent,
+    CustomerListComponent,
+    CustomerListItemComponent
   ],
   imports: [
     BrowserModule,
