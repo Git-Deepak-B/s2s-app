@@ -6,15 +6,17 @@ import {ProvisionListComponent} from './provision/provision-list/provision-list.
 import {CreateProvisionComponent} from './provision/create-provision/create-provision.component';
 import {ProvisionDetailComponent} from './provision/provision-detail/provision-detail.component';
 import {CustomerListComponent} from './customer/customer-list/customer-list.component';
+import {CreateUserComponent} from './user/create-user/create-user.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'dash', component: DashboardComponent },
   { path: 'provisions', component: ProvisionListComponent },
-  { path: 'provisions/create', component: CreateProvisionComponent },
-  { path: 'provisions/:id', component: ProvisionDetailComponent },
+  { path: 'provision/create', component: CreateProvisionComponent },
+  { path: 'provision/:id', component: ProvisionDetailComponent },
   { path: 'customers', component: CustomerListComponent },
-  {path: '', redirectTo: '/login', pathMatch: 'full'}
+  { path: 'user/create', component:CreateUserComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 
 @NgModule({

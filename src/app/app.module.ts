@@ -18,6 +18,7 @@ import { AddressPipe } from './common/pipes/address.pipe';
 import { StatisticsComponent } from './global/statistics/statistics.component';
 import { CustomerListComponent } from './customer/customer-list/customer-list.component';
 import { CustomerListItemComponent } from './customer/customer-list-item/customer-list-item.component';
+import { CreateUserComponent } from './user/create-user/create-user.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { CustomerListItemComponent } from './customer/customer-list-item/custome
     AddressPipe,
     StatisticsComponent,
     CustomerListComponent,
-    CustomerListItemComponent
+    CustomerListItemComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
