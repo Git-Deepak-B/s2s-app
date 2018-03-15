@@ -1,4 +1,4 @@
-<aside class="left-sidebar">
+<aside class="left-sidebar" *ngIf="!isLogin">
   <!-- Sidebar scroll-->
   <div class="scroll-sidebar">
     <!-- Sidebar navigation-->
@@ -24,17 +24,15 @@
         <li></li>
 
         <li class="nav-small-cap"> --- MAIN MENU</li>
-
-        <li><a href="/dash" class="waves-effect waves-dark"><i
-          class="ti-layout-grid2"></i><span class="hide-menu"> Dashboard</span></a></li>
-        <li><a href="/provision/create" class="waves-effect waves-dark"><i class="ti-comment-alt"></i><span
-          class="hide-menu"> Create Request</span></a></li>
-        <li><a href="/provisions" class="waves-effect waves-dark"><i class="ti-support"></i><span
-          class="hide-menu"> View All Requests</span></a></li>
-        <li><a href="/customers" class="waves-effect waves-dark"><i class="ti-mobile"></i><span
-          class="hide-menu"> View Customers</span></a></li>
-        <li><a href="/user/create" class="waves-effect waves-dark"><i class="ti-book"></i><span
-          class="hide-menu"> Register User</span></a></li>
+        <!-- TODO - need to add admin condition to display navItem.adminOnly links... -->
+        <li *ngFor="let navItem of navItems"
+            [ngClass]="{'active': currentPath === navItem.href}">
+          <a routerLink="{{ navItem.href }}" class="waves-effect waves-dark"
+             [ngClass]="{'active': currentPath === navItem.href}">
+            <i class="ti-layout-grid2"></i>
+            <span class="hide-menu"> {{ navItem.name }}</span>
+          </a>
+        </li>
       </ul>
     </nav>
     <!-- End Sidebar navigation -->

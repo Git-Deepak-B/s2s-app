@@ -1,14 +1,10 @@
-<div id="main-wrapper">
-  <app-header></app-header>
-  <app-navigator></app-navigator>
-  <div class="page-wrapper">
-    <div class="container-fluid">
-      <div class="row page-titles">
-        <div class="col-md-5 align-self-center">
-          <h4 class="text-themecolor">Provisions</h4>
-        </div>
+<div class="page-wrapper">
+  <div class="container-fluid">
+    <div class="row page-titles">
+      <div class="col-md-5 align-self-center">
+        <h4 class="text-themecolor">Provisions</h4>
       </div>
-      <app-provision-list-item *ngFor="let number of [0,1,2,3,4]"></app-provision-list-item>
     </div>
+    <app-provision-list-item *ngFor="let number of [0,1,2,3,4]"></app-provision-list-item>
   </div>
 </div>
