@@ -4,14 +4,14 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row" *ngIf="dashStatus">
   <div class="col-md-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">PREQUAL REQUEST RECEIVED</h5>
+        <h5 class="card-title">{{dashStatus.prequal.text}}</h5>
         <div class="d-flex m-t-30 no-block align-items-center">
           <span class="display-5 text-info"><i class="icon-people text-info"></i></span>
-          <div class="link display-5 ml-auto">23</div>
+          <div class="link display-5 ml-auto">{{dashStatus.prequal.count}}</div>
         </div>
       </div>
     </div>
@@ -19,24 +19,24 @@
   <div class="col-md-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">QUOTE PROVIDED</h5>
+        <h5 class="card-title">{{dashStatus.quoteProvided.text}}</h5>
         <div class="d-flex m-t-30 no-block align-items-center">
           <span class="display-5 text-info"><i class="icon-envelope-open text-purple"></i></span>
-          <div class="link display-5 ml-auto">169</div>
+          <div class="link display-5 ml-auto">{{dashStatus.quoteProvided.count}}</div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="row">
+<div class="row" *ngIf="dashStatus">
   <div class="col-md-4">
     <div class="card m-h-180">
       <div class="card-body">
-        <h5 class="card-title">ORDER PLACED WITH ISP</h5>
+        <h5 class="card-title">{{dashStatus.orderPlaced.text}}</h5>
         <div class="d-flex m-t-50 no-block align-items-center">
           <span class="display-5 text-info"><i class="icon-size-actual text-success"></i></span>
-          <div class="link display-5 ml-auto">23</div>
+          <div class="link display-5 ml-auto">{{dashStatus.orderPlaced.count}}</div>
         </div>
       </div>
     </div>
@@ -44,10 +44,10 @@
   <div class="col-md-4">
     <div class="card m-h-180">
       <div class="card-body">
-        <h5 class="card-title">CIRCUIT INSTALLED, DETAILS SENT TO CUSTOMER</h5>
+        <h5 class="card-title">{{dashStatus.circuitInstalled.text}}</h5>
         <div class="d-flex m-t-30 no-block align-items-center">
           <span class="display-5 text-info"><i class="icon-wrench text-warning"></i></span>
-          <div class="link display-5 ml-auto">169</div>
+          <div class="link display-5 ml-auto">{{dashStatus.circuitInstalled.count}}</div>
         </div>
       </div>
     </div>
@@ -55,10 +55,10 @@
   <div class="col-md-4">
     <div class="card m-h-180">
       <div class="card-body">
-        <h5 class="card-title">ORDER RECEIVED</h5>
+        <h5 class="card-title">{{dashStatus.orderReceived.text}}</h5>
         <div class="d-flex m-t-50 no-block align-items-center">
           <span class="display-5 text-info"><i class="icon-docs text-danger"></i></span>
-          <div class="link display-5 ml-auto">311</div>
+          <div class="link display-5 ml-auto">{{dashStatus.orderReceived.count}}</div>
         </div>
       </div>
     </div>

@@ -8,6 +8,7 @@ import 'rxjs/add/operator/delay';
 import 'rxjs/add/operator/materialize';
 import 'rxjs/add/operator/dematerialize';
 import {MockUsers} from '../../assets/data/mock-user';
+import {MockDashStatus} from '../../assets/data/mock-dash-status';
 
 @Injectable()
 export class MockAPIService implements HttpInterceptor {
@@ -55,6 +56,15 @@ export class MockAPIService implements HttpInterceptor {
           // return 401 not authorised if token is null or invalid
           return Observable.throw('Unauthorised');
         }
+      }
+
+      if (req.url.indexOf('api/dashStatus') !== -1 && req.method === 'GET') {
+        // if (req.headers.get('Authorization') === 'Bearer s2s-token') {
+        return Observable.of(new HttpResponse({status: 200, body: MockDashStatus}));
+        // } else {
+        //   // return 401 not authorised if token is null or invalid
+        //   return Observable.throw('Unauthorised');
+        // }
       }
 
       if (req.url.indexOf('/api/user') !== -1 && req.method === 'GET') {
