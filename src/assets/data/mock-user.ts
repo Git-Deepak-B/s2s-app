@@ -66,6 +66,29 @@ export const MockUsers = {
         'company': 'Gibi Systems',
         'username': 'psrinivasan',
         'token': 's2s-token'
+      },
+      {
+        'firstName': 'prashant',
+        'lastName': 'srinivasan',
+        'email': 'psrinivasan@test.com',
+        'password': '1234',
+        'confirmPassword': '1234',
+        'role': 'customer',
+        'company': 'Focus Point',
+        'username': 'test',
+        'token': 's2s-token'
+      },
+      {
+        'firstName': 'prashant',
+        'lastName': 'srinivasan',
+        'email': 'psrinivasan@test.com',
+        'password': '1234',
+        'confirmPassword': '1234',
+        'role': 'customer',
+        'company': 'Focus Point',
+        'username': 'testing',
+        'token': 's2s-token'
       }
+
     ]
 };

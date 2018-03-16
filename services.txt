@@ -4,7 +4,7 @@ string userId - mandatory
 string password - mandatory
 
 returns:
-user object containing userId, email, role, company name etc. 
+user object containing userId, email, role, company name etc.
 
 2. Get Requests
 parameters:

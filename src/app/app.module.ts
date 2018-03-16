@@ -28,6 +28,8 @@ import {ProvisionTableComponent} from './provision/provision-table/provision-tab
 import {DashStatusService} from './services/dash-status.service';
 import {DataTablesModule} from 'angular-datatables';
 import {ProvisionService} from './services/provision.service';
+import { CustomerTableComponent } from './customer/customer-table/customer-table.component';
+import { UserService } from './services/user.service';
 
 
 @NgModule({
@@ -48,7 +50,8 @@ import {ProvisionService} from './services/provision.service';
     CustomerListComponent,
     CustomerListItemComponent,
     CreateUserComponent,
-    ProvisionTableComponent
+    ProvisionTableComponent,
+    CustomerTableComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +68,8 @@ import {ProvisionService} from './services/provision.service';
     mockAPIProvider,
     tokenProvider,
     DashStatusService,
-    ProvisionService],
+    ProvisionService,
+    UserService],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })

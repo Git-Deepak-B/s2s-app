@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UserStoreService} from '../stores/user-store.service';
-import {MockUsers} from '../../assets/data/mock-user';
 import {DashStatusService} from '../services/dash-status.service';
-import {DashStatus} from '../common/types/DashStatus';
 
 @Component({
   selector: 'app-dashboard',

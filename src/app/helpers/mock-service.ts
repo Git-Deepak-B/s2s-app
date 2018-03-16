@@ -46,16 +46,16 @@ export class MockAPIService implements HttpInterceptor {
       }
 
       if (req.url.indexOf('/api/users') !== -1 && req.method === 'GET') {
-        if (req.headers.get('Authorization') === 'Bearer s2s-token') {
+        //if (req.headers.get('Authorization') === 'Bearer s2s-token') {
           // find user by id in users array
           const urlParts = req.url.split('/');
           const role = urlParts[urlParts.length - 1];
           const matchedUsers = users.filter(user => user.role === role);
           return Observable.of(new HttpResponse({status: 200, body: matchedUsers.length ? matchedUsers : null}));
-        } else {
+        //} else {
           // return 401 not authorised if token is null or invalid
-          return Observable.throw('Unauthorised');
-        }
+          //return Observable.throw('Unauthorised');
+        //}
       }
 
       if (req.url.indexOf('api/dashStatus') !== -1 && req.method === 'GET') {
@@ -68,16 +68,16 @@ export class MockAPIService implements HttpInterceptor {
       }
 
       if (req.url.indexOf('/api/user') !== -1 && req.method === 'GET') {
-        if (req.headers.get('Authorization') === 'Bearer s2s-token') {
+        //if (req.headers.get('Authorization') === 'Bearer s2s-token') {
           // find user by id in users array
           const urlParts = req.url.split('/');
           const username = urlParts[urlParts.length - 1];
           const matchedUsers = users.filter(user => user.username === username);
           return Observable.of(new HttpResponse({status: 200, body: matchedUsers.length ? matchedUsers[0] : null}));
-        } else {
+        //} else {
           // return 401 not authorised if token is null or invalid
-          return Observable.throw('Unauthorised');
-        }
+          //return Observable.throw('Unauthorised');
+        //}
       }
 
       // Pass thru for the non fake service

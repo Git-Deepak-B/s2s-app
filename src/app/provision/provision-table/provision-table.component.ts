@@ -31,8 +31,6 @@ export class ProvisionTableComponent implements OnInit {
       this.provisions = data;
       this.dtTrigger.next(data);
     });
-
-    console.log(this.provisions);
   }
 
 }
