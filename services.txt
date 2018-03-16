@@ -1,0 +1,12 @@
+1. User Service - authenticate, if success - return user object (name, email, token etc...)
+parameters:
+string userId - mandatory
+string password - mandatory
+
+2. Get Requests
+parameters:
+string userId - if passed, requests will be filtered to that user. when not passed, pull all requests. mandatory for customers.
+string companyName - if passed, requests will be filtered to that company. mandatory for customers.
+string searchText - if passed, backend will query with LIKE clause on company name, site id, service address, current status
+boolean recentOnly -  if true, backend will return X number of recent requests
+

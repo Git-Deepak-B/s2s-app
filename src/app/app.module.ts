@@ -24,6 +24,7 @@ import {UserStoreService} from './stores/user-store.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {mockAPIProvider, tokenProvider} from './helpers';
+import { ProvisionTableComponent } from './provision/provision-table/provision-table.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import {mockAPIProvider, tokenProvider} from './helpers';
     StatisticsComponent,
     CustomerListComponent,
     CustomerListItemComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    ProvisionTableComponent
   ],
   imports: [
     BrowserModule,

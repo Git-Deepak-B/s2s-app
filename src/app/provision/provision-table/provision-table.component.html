@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <table id="myTable" class="table table-hover">
+          <thead>
+          <th>Request No.</th>
+          <th>Company Name</th>
+          <th>Site ID</th>
+          <th>Service Address</th>
+          <th>Circuit Purpose</th>
+          <th>Current Status</th>
+          <th>Date Created</th>
+          <th>Action</th>
+          </thead>
+          <tbody>
+          <tr *ngFor="let number of [0,1,2,3,4]" app-provision-list-item></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,11 +9,10 @@ import {MockUsers} from '../../assets/data/mock-user';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private _userStore: UserStoreService) {
+  constructor() {
   }
 
   ngOnInit() {
-    this._userStore.setUser(MockUsers.users[0]);
   }
 
 }
