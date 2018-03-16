@@ -26,6 +26,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {mockAPIProvider, tokenProvider} from './helpers';
 import {ProvisionTableComponent} from './provision/provision-table/provision-table.component';
 import {DashStatusService} from './services/dash-status.service';
+import {DataTablesModule} from 'angular-datatables';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import {DashStatusService} from './services/dash-status.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    DataTablesModule,
     MDBBootstrapModule.forRoot()
   ],
   providers: [AuthorizationService,

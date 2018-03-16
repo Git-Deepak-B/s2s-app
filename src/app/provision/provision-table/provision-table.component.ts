@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-provision-table',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./provision-table.component.scss']
 })
 export class ProvisionTableComponent implements OnInit {
+  dtOptions;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+    this.dtOptions = {
+      'bLengthChange': false,
+      'bSort': false
+    };
   }
 
 }
