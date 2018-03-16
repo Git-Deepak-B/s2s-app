@@ -24,7 +24,8 @@ import {UserStoreService} from './stores/user-store.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {mockAPIProvider, tokenProvider} from './helpers';
-import { ProvisionTableComponent } from './provision/provision-table/provision-table.component';
+import {ProvisionTableComponent} from './provision/provision-table/provision-table.component';
+import {DashStatusService} from './services/dash-status.service';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { ProvisionTableComponent } from './provision/provision-table/provision-t
     StorageService,
     UserStoreService,
     mockAPIProvider,
-    tokenProvider],
+    tokenProvider,
+    DashStatusService],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })
