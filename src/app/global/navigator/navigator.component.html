@@ -1,4 +1,4 @@
-<aside class="left-sidebar" *ngIf="!isLogin">
+<aside class="left-sidebar" *ngIf="user">
   <!-- Sidebar scroll-->
   <div class="scroll-sidebar">
     <!-- Sidebar navigation-->
@@ -9,12 +9,13 @@
             <div class="card">
                 <div class="card-body">
                     <small class="text-muted"><i class="fa fa-address-card"></i> Profile</small>
-                    <h4 class="card-title">AADMIN</h4>
-                    <small class="text-muted"><i class="fa fa-user"></i>Username</small>
-                    <p class="card-text">Admin Admin</p>
+                    <h4 class="card-title">{{user.username}}</h4>
+                    <small class="text-muted"><i class="fa fa-user"></i>Name</small>
+                    <p class="card-text">{{user.firstName}} {{user.lastName}}</p>
                     <small class="text-muted"><i class="fa fa-envelope"></i>Email Address</small>
-                    <p class="card-text">admin@provisioning.com</p>
-                    <a class="btn btn-primary btn-block waves-effect waves-dark" href="#" data-toggle="modal" data-target="#exampleModal"><i
+                    <p class="card-text">{{user.email}}</p>
+                    <a class="btn btn-primary btn-block waves-effect waves-dark" href="#" data-toggle="modal"
+                       data-target="#exampleModal"><i
                       class="fa fa-pencil-square-o"></i><span class="hide-menu">Edit Profile</span></a>
                 </div>
             </div>
@@ -25,10 +26,8 @@
 
         <li class="nav-small-cap"> --- MAIN MENU</li>
         <!-- TODO - need to add admin condition to display navItem.adminOnly links... -->
-        <li *ngFor="let navItem of navItems"
-            [ngClass]="{'active': selectedItem == navItem}" (click)="navClick(navItem)">
-          <a routerLink="{{ navItem.href }}" class="waves-effect waves-dark"
-             [ngClass]="{'active': selectedItem == navItem}">
+        <li *ngFor="let navItem of navItems" routerLink="{{ navItem.href }}" routerLinkActive="active">
+          <a class="waves-effect waves-dark">
             <i class="ti-layout-grid2"></i>
             <span class="hide-menu"> {{ navItem.name }}</span>
           </a>

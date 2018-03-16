@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {User} from '../../common/types/User';
+import {UserStoreService} from '../../stores/user-store.service';
+import {AuthorizationService} from '../../services/authorization.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,18 +10,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  isLogin;
+  user: User;
 
-  constructor() {
+  constructor(private _userStore: UserStoreService,
+              private _authService: AuthorizationService,
+              private _router: Router) {
 
   }
 
   ngOnInit() {
-    this.isLogin =  window.location.pathname === '/login';
+    this._userStore.getUser().subscribe(user => this.user = user);
   }
 
   logout() {
     // call logout service
     console.log('user logged out... ');
+    this._authService.logout();
+    // this._router.navigate(['/login']);
+
   }
 }

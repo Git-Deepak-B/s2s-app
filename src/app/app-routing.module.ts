@@ -9,14 +9,14 @@ import {CustomerListComponent} from './customer/customer-list/customer-list.comp
 import {CreateUserComponent} from './user/create-user/create-user.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'dash', component: DashboardComponent },
-  { path: 'provisions', component: ProvisionListComponent },
-  { path: 'provision/create', component: CreateProvisionComponent },
-  { path: 'provision/:id', component: ProvisionDetailComponent },
-  { path: 'customers', component: CustomerListComponent },
-  { path: 'user/create', component:CreateUserComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' }
+  {path: 'login', component: LoginComponent},
+  {path: 'dash', component: DashboardComponent},
+  {path: 'provisions', component: ProvisionListComponent},
+  {path: 'provision/create', component: CreateProvisionComponent},
+  {path: 'provision/:id', component: ProvisionDetailComponent},
+  {path: 'customers', component: CustomerListComponent},
+  {path: 'user/create', component: CreateUserComponent},
+  {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 
 @NgModule({

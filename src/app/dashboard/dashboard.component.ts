@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UserStoreService} from '../stores/user-store.service';
+import {MockUsers} from '../../assets/data/mock-user';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _userStore: UserStoreService) {
+  }
 
   ngOnInit() {
+    this._userStore.setUser(MockUsers.users[0]);
   }
 
 }

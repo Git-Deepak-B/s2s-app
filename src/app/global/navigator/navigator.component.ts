@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { NAVITEMS } from '../../../assets/data/nav-items';
+import {Component, OnInit} from '@angular/core';
+import {NAVITEMS} from '../../../assets/data/nav-items';
+import {User} from '../../common/types/User';
+import {UserStoreService} from '../../stores/user-store.service';
 
 @Component({
   selector: 'app-navigator',
@@ -9,22 +11,13 @@ import { NAVITEMS } from '../../../assets/data/nav-items';
 
 export class NavigatorComponent implements OnInit {
   navItems = NAVITEMS;
-  isLogin;
-  selectedItem;
+  user: User;
 
-  constructor() {
+  constructor(private _userStore: UserStoreService) {
   }
 
   ngOnInit() {
-    this.isLogin =  window.location.pathname === '/login';
-
-    // set default nav item to be active when page is refreshed
-    this.selectedItem = this.navItems.find(function (navItem) {
-      return navItem.href === window.location.pathname;
-    });
+    this._userStore.getUser().subscribe(user => this.user = user);
   }
 
-  navClick(newItem) {
-    this.selectedItem = newItem;
-  }
 }
