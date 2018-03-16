@@ -5,6 +5,142 @@
         <h4 class="text-themecolor">Create Provision</h4>
       </div>
     </div>
-    Form goes here...
+
+    <div class="row" *ngIf="user">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <form [formGroup]="createProvisionForm" #form="ngForm" (submit)="createProvision(form.value)">
+              <div class="form-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Company Name*</label>
+                      <input type="text" formControlName="companyName" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">email*</label>
+                      <input type="text" formControlName="email" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <!--/row-->
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Site ID*</label>
+                      <input type="text" formControlName="siteId" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Location Phone #</label>
+                      <input type="text" formControlName="locationPhone" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Site Contact</label>
+                      <input type="text" formControlName="siteContact" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Site Contact Phone #</label>
+                      <input type="text" formControlName="siteContactPhone" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <!--/row-->
+                <!--/row-->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Address Line 1*</label>
+                      <input type="text" formControlName="addressLine1" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Created By</label>
+                      <input type="text" formControlName="createdBy" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <!--/row-->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Address Line 2*</label>
+                      <input type="text" formControlName="addressLine2" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Circuit Purpose</label>
+                      <select class="form-control" data-placeholder="Select Circuit Purpose"
+                              [formControlName]="circuitPurpose" tabindex="1">
+                        <option value="Primary">Primary</option>
+                        <option value="Backup">Backup</option>
+                        <option value="VoIP">VoIP</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!--/row-->
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">City*</label>
+                      <input type="text" formControlName="city" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">State*</label>
+                      <select class="form-control" [formControlName]="state" data-placeholder="Select State"
+                              tabindex="1">
+                        <option value="state">NC</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Zip Code*</label>
+                      <input type="text" formControlName="zipCode" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Country</label>
+                      <input type="text" formControlName="country" class="form-control" readonly>
+                    </div>
+                  </div>
+                </div>
+                <!--/row-->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="control-label">Comments</label>
+                      <textarea class="form-control" formControlName="comments" rows="4"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-actions p-t-20">
+                <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Save</button>
+                <button type="button" class="btn btn-default">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
