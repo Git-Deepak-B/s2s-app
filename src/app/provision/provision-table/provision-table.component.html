@@ -1,26 +1,18 @@
-<div class="row">
-  <div class="col-12">
-    <div class="card">
-      <div class="card-body">
-        <table datatable [dtOptions]="dtOptions" class="table table-hover">
-          <thead>
-            <tr>
-              <th>Request No.</th>
-              <th>Company Name</th>
-              <th>Site ID</th>
-              <th>Service Address</th>
-              <th>Circuit Purpose</th>
-              <th>Current Status</th>
-              <th>Date Created</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let number of [0,1,2,3,4]" app-provision-list-item></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-hover">
+  <thead>
+  <tr>
+    <th>Request No.</th>
+    <th>Company Name</th>
+    <th>Site ID</th>
+    <th>Service Address</th>
+    <th>Circuit Purpose</th>
+    <th>Current Status</th>
+    <th>Date Created</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let provision of provisions" app-provision-list-item [provision]="provision"></tr>
+  </tbody>
+</table>
 

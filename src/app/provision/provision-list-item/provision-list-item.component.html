@@ -1,12 +1,14 @@
-<td>1</td>
-<td>Gibi Systems</td>
-<td>123</td>
-<td>2442 courtney oaks rd<br>charlotte,NC - 28217</td>
-<td>Primary</td>
-<td>Prequal Request</td>
-<td>12-21-2017</td>
+<td>{{provision.id}}</td>
+<td>{{provision.company}}</td>
+<td>{{provision.siteId}}</td>
+<td>{{provision.location.addressLine1}}{{provision.location.addressLine2}}<br>{{provision.location.city}},
+  {{provision.location.state}} - {{provision.location.zipCode}}
+</td>
+<td>{{provision.circuitPurpose}}</td>
+<td>{{provision.status}}</td>
+<td>{{provision.dateCreated}}</td>
 <td>
-  <a routerLink="/provision/1">
+  <a routerLink="/provision/{{provision.id}}">
     <button class="btn btn-outline-success btn-outline btn-sm">Track Status</button>
   </a>
 </td>

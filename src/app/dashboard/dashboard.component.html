@@ -1,6 +1,19 @@
 <div class="page-wrapper">
   <div class="container-fluid">
     <app-statistics [dashStatus]="dashStatus"></app-statistics>
-    <app-provision-table></app-provision-table>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title" *ngIf="user.role === 'admin'">Recently Worked Requests</h3>
+            <h3 class="card-title" *ngIf="user.role === 'customer'">Recent Requests</h3>
+            <div class="table-responsive">
+              <app-provision-table [recentOnly]="true"></app-provision-table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -27,6 +27,7 @@ import {mockAPIProvider, tokenProvider} from './helpers';
 import {ProvisionTableComponent} from './provision/provision-table/provision-table.component';
 import {DashStatusService} from './services/dash-status.service';
 import {DataTablesModule} from 'angular-datatables';
+import {ProvisionService} from './services/provision.service';
 
 
 @NgModule({
@@ -63,7 +64,8 @@ import {DataTablesModule} from 'angular-datatables';
     UserStoreService,
     mockAPIProvider,
     tokenProvider,
-    DashStatusService],
+    DashStatusService,
+    ProvisionService],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })

@@ -10,7 +10,7 @@ import {DashStatus} from '../common/types/DashStatus';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
+  user;
   dashStatus;
 
   constructor(private _userStore: UserStoreService,
@@ -22,6 +22,7 @@ export class DashboardComponent implements OnInit {
       console.log(resp);
       this.dashStatus = resp;
     });
+    this._userStore.getUser().subscribe(user => this.user = user);
   }
 
 }
