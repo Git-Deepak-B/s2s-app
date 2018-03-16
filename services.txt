@@ -1,7 +1,10 @@
-1. User Service - authenticate, if success - return user object (name, email, token etc...)
+1. User Service - authenticate
 parameters:
 string userId - mandatory
 string password - mandatory
+
+returns:
+user object containing userId, email, role, company name etc. 
 
 2. Get Requests
 parameters:

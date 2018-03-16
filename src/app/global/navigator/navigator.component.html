@@ -27,7 +27,7 @@
         <li class="nav-small-cap"> --- MAIN MENU</li>
         <!-- TODO - need to add admin condition to display navItem.adminOnly links... -->
         <li *ngFor="let navItem of navItems" routerLink="{{ navItem.href }}" routerLinkActive="active">
-          <a class="waves-effect waves-dark">
+          <a class="waves-effect waves-dark" *ngIf="!navItem.adminOnly || (navItem.adminOnly && user.role === 'admin')">
             <i class="ti-layout-grid2"></i>
             <span class="hide-menu"> {{ navItem.name }}</span>
           </a>
