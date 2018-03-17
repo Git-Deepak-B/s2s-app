@@ -1,6 +1,7 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ModalDirective} from 'angular-bootstrap-md/modals/modal.directive';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: '[app-customer-list-item]',
@@ -13,7 +14,7 @@ export class CustomerListItemComponent implements OnInit {
   @Input('customer')
   customer;
 
-  constructor() {
+  constructor(private _userService: UserService) {
   }
 
   ngOnInit() {
@@ -54,7 +55,9 @@ export class CustomerListItemComponent implements OnInit {
   }
 
   resetPassword(customer) {
-    console.log(customer.username);
-    this.resetPasswordModal.show();
+    console.log(customer.email);
+    this._userService.sendForgotPwdEmail(customer.email).subscribe(data =>
+      data.posted ? this.resetPasswordModal.show() :
+        console.log('An Error Occurred in triggering forgot password email!!' + customer.email));
   }
 }
