@@ -81,7 +81,7 @@
                     <div class="form-group">
                       <label class="control-label">Circuit Purpose</label>
                       <select class="form-control" data-placeholder="Select Circuit Purpose"
-                              [formControlName]="circuitPurpose" tabindex="1">
+                              formControlName="circuitPurpose" tabindex="1">
                         <option value="Primary">Primary</option>
                         <option value="Backup">Backup</option>
                         <option value="VoIP">VoIP</option>
@@ -101,7 +101,7 @@
                   <div class="col-md-3">
                     <div class="form-group">
                       <label class="control-label">State*</label>
-                      <select class="form-control" [formControlName]="state" data-placeholder="Select State"
+                      <select class="form-control" formControlName="state" data-placeholder="Select State"
                               tabindex="1">
                         <option value="state">NC</option>
                       </select>

@@ -27,5 +27,4 @@ export class CustomerTableComponent implements OnInit {
       this.dtTrigger.next(data);
     });
   }
-
 }

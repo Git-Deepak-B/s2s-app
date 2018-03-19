@@ -21,7 +21,7 @@ export class CreateProvisionComponent implements OnInit {
     siteContact: new FormControl('', []),
     siteContactPhone: new FormControl('', []),
     addressLine1: new FormControl('', [Validators.required]),
-    addressLine2: new FormControl('', []),
+    addressLine2: new FormControl('', [Validators.required]),
     city: new FormControl('', [Validators.required]),
     state: new FormControl('', [Validators.required]),
     zipCode: new FormControl('', [Validators.required]),
@@ -73,7 +73,6 @@ export class CreateProvisionComponent implements OnInit {
   get city() {
     return this.createProvisionForm.get('city');
   }
-  
 
   get state() {
     return this.createProvisionForm.get('state');

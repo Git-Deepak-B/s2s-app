@@ -16,3 +16,81 @@
     </div>
   </div>
 </div>
+
+<div mdbModal #resetPasswordSuccessModal="mdb-modal" class="modal fade" id="resetPasswordSuccessModal" tabindex="-1"
+     role="dialog"
+     aria-labelledby="Password Reset Success" aria-hidden="true">
+  <div *ngIf="resetPasswordCustomer" class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Reset Password</h4>
+        <button type="button" class="close" aria-label="Close" (click)="resetPasswordSuccessModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Password reset email sent to {{resetPasswordCustomer.email}} !</p>
+      </div>
+      <div class="modal-footer">
+        <div class="col-md-12 text-center">
+          <button type="button" class="btn btn-danger" (click)="resetPasswordSuccessModal.hide()">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div mdbModal #updateCustomerModal="mdb-modal" class="modal fade" id="updateCustomerModal" tabindex="-1" role="dialog"
+     aria-labelledby="Edit Customer" aria-hidden="true">
+  <div *ngIf="updateCustomer" class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form [formGroup]="updateCustomerForm" #form="ngForm" (submit)="onUpdateCustomer(form.value)">
+        <div class="modal-header">
+          <h4 class="modal-title">Update Customer</h4>
+          <button type="button" class="close" aria-label="Close" (click)="updateCustomerModal.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" formControlName="username" id="username"
+                   value="{{updateCustomer.username}}" readonly>
+          </div>
+          <div class="form-group">
+            <label for="company-name">Company Name</label>
+            <input type="text" class="form-control" formControlName="company" id="company-name"
+                   value="{{updateCustomer.company}}">
+          </div>
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" class="form-control" formControlName="firstName" id="first-name"
+                   value="{{updateCustomer.firstName}}">
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" class="form-control" formControlName="lastName" id="last-name"
+                   value="{{updateCustomer.lastName}}">
+          </div>
+          <div class="form-group">
+            <label for="email">E-Mail</label>
+            <input type="email" class="form-control" formControlName="email" id="email"
+                   value="{{updateCustomer.email}}" readonly>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-primary">
+              <span class="fa fa-save fa-lg"></span> Save
+            </button>
+            <button type="button" class="btn btn-danger" (click)="updateCustomerModal.hide()">
+              <span aria-hidden="true">&times;</span> Cancel
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -30,6 +30,7 @@ import {DataTablesModule} from 'angular-datatables';
 import {ProvisionService} from './services/provision.service';
 import { CustomerTableComponent } from './customer/customer-table/customer-table.component';
 import { UserService } from './services/user.service';
+import { EditCustomerDataService } from './services/edit-customer-data.service';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { UserService } from './services/user.service';
     tokenProvider,
     DashStatusService,
     ProvisionService,
-    UserService],
+    UserService,
+    EditCustomerDataService],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })

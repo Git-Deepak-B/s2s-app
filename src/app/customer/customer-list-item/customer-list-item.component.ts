@@ -1,7 +1,5 @@
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {ModalDirective} from 'angular-bootstrap-md/modals/modal.directive';
-import {UserService} from '../../services/user.service';
+import {Component, Input, OnInit} from '@angular/core';
+import {EditCustomerDataService} from '../../services/edit-customer-data.service';
 
 @Component({
   selector: '[app-customer-list-item]',
@@ -9,55 +7,20 @@ import {UserService} from '../../services/user.service';
   styleUrls: ['./customer-list-item.component.scss']
 })
 export class CustomerListItemComponent implements OnInit {
-  @ViewChild('resetPasswordModal') public resetPasswordModal: ModalDirective;
-  @ViewChild('updateCustomerModal') public updateCustomerModal: ModalDirective;
   @Input('customer')
   customer;
 
-  constructor(private _userService: UserService) {
+  constructor(private _editCustomerService: EditCustomerDataService) {
   }
 
   ngOnInit() {
   }
 
-  updateCustomerForm = new FormGroup({
-    username: new FormControl('', [Validators.required]),
-    company: new FormControl('', [Validators.required]),
-    firstName: new FormControl('', [Validators.required]),
-    lastName: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required])
-  });
-
-  get username() {
-    return this.updateCustomerForm.get('username');
-  }
-
-  get company() {
-    return this.updateCustomerForm.get('company');
-  }
-
-  get firstName() {
-    return this.updateCustomerForm.get('firstName');
-  }
-
-  get lastName() {
-    return this.updateCustomerForm.get('lastName');
-  }
-
-  get email() {
-    return this.updateCustomerForm.get('email');
-  }
-
-  updateCustomer(updateCustomerForm) {
-    // TODO debug why all values are coming as empty
-    // TODO show success message once update is complete
-    console.log(updateCustomerForm);
-  }
-
   resetPassword(customer) {
-    console.log(customer.email);
-    this._userService.sendForgotPwdEmail(customer.email).subscribe(data =>
-      data.posted ? this.resetPasswordModal.show() :
-        console.log('An Error Occurred in triggering forgot password email!!' + customer.email));
+    this._editCustomerService.onResetPasswordClicked(customer);
+  }
+
+  updateCustomer(customer) {
+    this._editCustomerService.onUpdateCustomerClicked(customer);
   }
 }
