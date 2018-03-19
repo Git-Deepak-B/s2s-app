@@ -14,9 +14,11 @@
                     <p class="card-text">{{user.firstName}} {{user.lastName}}</p>
                     <small class="text-muted"><i class="fa fa-envelope"></i>Email Address</small>
                     <p class="card-text">{{user.email}}</p>
-                    <a class="btn btn-primary btn-block waves-effect waves-dark" href="#" data-toggle="modal"
-                       data-target="#exampleModal"><i
-                      class="fa fa-pencil-square-o"></i><span class="hide-menu">Edit Profile</span></a>
+                    <button class="btn btn-primary btn-block waves-effect waves-dark" (click)="updateProfile.show()"
+                            data-toggle="modal"
+                            data-target="#updateProfile"><i
+                      class="fa fa-pencil-square-o"></i><span class="hide-menu">Edit Profile</span>
+                    </button>
                 </div>
             </div>
         </span>
@@ -38,3 +40,59 @@
   </div>
   <!-- End Sidebar scroll-->
 </aside>
+
+
+<div mdbModal #updateProfile="mdb-modal" class="modal fade" id="edit-profile" tabindex="-1"
+     role="dialog"
+     aria-labelledby="Password Reset Success" aria-hidden="true">
+  <div *ngIf="user" class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form [formGroup]="updateUserForm" #form="ngForm" (submit)="updateUser(form.value)">
+        <div class="modal-header">
+          <h4 class="modal-title">Edit Profile</h4>
+          <button type="button" class="close" aria-label="Close" (click)="updateProfile.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="admin_id">Username</label>
+            <input type="text" class="form-control" id="admin_id" formControlName="username" value="{{user.username}}"
+                   readonly>
+          </div>
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" class="form-control" id="first-name" formControlName="firstName"
+                   value="{{user.firstName}}">
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" class="form-control" id="last-name" formControlName="lastName" value="{{user.lastName}}">
+          </div>
+          <div class="form-group">
+            <label for="email">E-Mail</label>
+            <input type="email" class="form-control" id="email" formControlName="email" value="{{user.email}}">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" formControlName="password">
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" class="form-control" id="confirm-password" formControlName="confirmPassword">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-primary">
+              <span class="fa fa-save fa-lg"></span> Save
+            </button>
+            <button type="button" class="btn btn-danger" (click)="updateProfile.hide()">
+              <span aria-hidden="true">&times;</span> Close
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
